@@ -4,13 +4,13 @@ import { AppBar, Toolbar, styled } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 const Header = styled(AppBar)`
-  background: #000000;
+  background: #9acd32;
 `;
 
 const Tabs = styled(NavLink)`
   font-size: 25px;
   margin-right: 20px;
-  color: inherit;
+  color: black;
   text-decoration: none;
 `;
 
@@ -20,8 +20,8 @@ function NavBar() {
       <Header position="static">
         <Toolbar>
           <Tabs to="/">CRUD Data Pegawai</Tabs>
-          <Tabs to="/all">Semua User</Tabs>
-          <Tabs to="/add">Tambah User</Tabs>
+          <Tabs to="/all">Semua Pegawai</Tabs>
+          <Tabs to="/add">Tambah Pegawai</Tabs>
         </Toolbar>
       </Header>
     </div>

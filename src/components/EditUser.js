@@ -2,12 +2,13 @@ import { useState, useEffect } from "react";
 
 import {
   FormControl,
-  TextField,
   Typography,
   Button,
   styled,
   FormGroup,
 } from "@mui/material";
+import TextField from "@mui/material/TextField";
+import Autocomplete from "@mui/material/Autocomplete";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { getUser, editUser } from "../service/api";
@@ -52,6 +53,24 @@ const EditUser = () => {
     navigate("/all");
   };
 
+  const top100provinsi = [
+    { label: "Riau" },
+    { label: "Aceh" },
+    { label: "Sumatra Barat" },
+    { label: "Sumatra Utara" },
+    { label: "Bali" },
+    { label: "Bengkulu" },
+    { label: "Palembang" },
+    { label: "DKI Jakarta" },
+    { label: "Jambi" },
+    { label: "Jawa Barat" },
+    { label: "Jawa Timur" },
+    { label: "Jawa Tengah" },
+    { label: "Kalimantan Timur" },
+    { label: "Kalimantan Selatan" },
+    { label: "Kalimantan Barat" },
+  ];
+
   return (
     <Container>
       <Typography variant="h4">Edit User</Typography>
@@ -76,13 +95,14 @@ const EditUser = () => {
         />
       </FormControl>
       <FormControl>
-        <TextField
+        <Autocomplete
+          disablePortal
           onChange={(e) => onValueChange(e)}
-          id="outlined-basic"
           value={user.provinsi}
-          name="provinsi"
-          label="Provinsi"
-          variant="outlined"
+          id="combo-box-demo"
+          options={top100provinsi}
+          sx={{ width: 500 }}
+          renderInput={(params) => <TextField {...params} label="Provinsi" />}
         />
       </FormControl>
       <FormControl>

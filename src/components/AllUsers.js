@@ -8,7 +8,6 @@ import {
   styled,
   Button,
   Paper,
-
 } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
@@ -20,17 +19,17 @@ import { Link } from "react-router-dom";
 
 const StyledTable = styled(Table)`
   width: 90%;
-  margin: 50px auto 0 auto;
+  margin: 55px;
 `;
 
 const StyledSearch = styled(Paper)`
-  width: 90%;
-  margin: 50px auto 0 auto;
-  background: #2ba3ff;
+  width: 90;
+  margin: 55px auto 0 auto;
+  background: #c0c0c0;
 `;
 
 const Thead = styled(TableRow)`
-  background: #2ba3ff;
+  background: #9acd32;
   & > th {
     font-size: 20px;
   }

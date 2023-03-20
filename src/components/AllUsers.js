@@ -60,6 +60,14 @@ const AllUsers = () => {
   const deleteUserData = async (id) => {
     await deleteUser(id);
     getUsersDetails();
+    if (window.confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+      // Tindakan yang akan diambil jika pengguna menekan tombol "OK"
+      console.log("Data berhasil dihapus");
+      // kode untuk menghapus data
+    } else {
+      // Tindakan yang akan diambil jika menekan tombol "BATAL"
+      console.log("Penghapusan data dibatalkan");
+    }
   };
 
   return (
@@ -116,6 +124,7 @@ const AllUsers = () => {
                     Edit
                   </Button>
                   <Button
+                    className="btn btn-danger"
                     variant="contained"
                     color="success"
                     onClick={() => deleteUserData(user.id)}

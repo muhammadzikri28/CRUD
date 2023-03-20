@@ -19,8 +19,8 @@ function NavBar() {
     <div>
       <Header position="static">
         <Toolbar>
-          <Tabs to="/">CRUD Data Pegawai</Tabs>
-          <Tabs to="/all">Semua Pegawai</Tabs>
+          <Tabs to="/">CRUD</Tabs>
+          <Tabs to="/all">Table Data Pegawai</Tabs>
           <Tabs to="/add">Tambah Pegawai</Tabs>
         </Toolbar>
       </Header>

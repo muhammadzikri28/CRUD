@@ -57,10 +57,9 @@ const AllUsers = () => {
     setUsers(response.data);
   };
 
-  const deleteUserData = async (id) => {
-    await deleteUser(id);
-    getUsersDetails();
+  const deleteUserData =  (id) => {
     if (window.confirm("Apakah Anda yakin ingin menghapus data ini?")) {
+      deleteUser(id);
       // Tindakan yang akan diambil jika pengguna menekan tombol "OK"
       console.log("Data berhasil dihapus");
       // kode untuk menghapus data
@@ -68,6 +67,7 @@ const AllUsers = () => {
       // Tindakan yang akan diambil jika menekan tombol "BATAL"
       console.log("Penghapusan data dibatalkan");
     }
+    getUsersDetails();
   };
 
   return (
